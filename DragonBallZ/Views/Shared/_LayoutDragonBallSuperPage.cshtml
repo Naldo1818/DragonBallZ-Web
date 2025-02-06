@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DragonBall Super</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Dragon Ball Super.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DragonBallZ.styles.css" asp-append-version="true" />
+
+</head>
+<body>
+    <header>
+        <button class="openbtn" onclick="openNav()">☰ </button>
+
+        <div id="mySidebar" class="sidebar" style="margin:20px">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <p> <h2 > Dragon Ball Z Menu</h2></p>
+          
+       <a  asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a  asp-area="" asp-controller="DragonBall" asp-action="Index">List</a>
+            <a asp-area="" asp-controller="DragonBall" asp-action="Create">Add List</a>
+            <a asp-area="" asp-controller="DragonBall" asp-action="DragonBall">Dragon Ball </a>
+            <a asp-area="" asp-controller="DragonBall" asp-action="DragonBallZ">Dragon Ball Z</a>
+            <a asp-area="" asp-controller="DragonBall" asp-action="DragonBallGT">Dragon Ball GT</a>
+            <a asp-area="" asp-controller="DragonBall" asp-action="DragonBallSuper">Dragon Ball Super</a>
+     
+         </div id="mySidebar" class="sidebar">
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+            }
+        </script>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - DragonBallZ - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

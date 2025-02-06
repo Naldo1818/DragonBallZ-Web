@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Dragon Ball Z List Page";
+}
+@{
+    Layout = "_LayoutList";
+}
+@model IEnumerable<DragonBallZ.Models.ZFighters>
+
+
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-9">
+        <h1>Dragon Ball Z LIST </h1>
+        </div>
+        <div class="col-9">
+            <h3>The following information given is a list of the strongest warriors in the Dragon Ball Z Universe. </h3>
+        </div>
+    </div>
+
+    <br />
+@if (Model.Count() > 0)
+{
+
+        <table class="table table-dark table-striped "  >
+        <thead>
+            <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Race
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Abilities
+            </th>
+            <th>
+                Weakness
+            </th>
+            <th>
+                Update
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var ZFighters in Model)
+        {
+            <tr>
+                <td width="15%" >@ZFighters.Name</td>
+                <td width="15%">@ZFighters.Race</td>
+                <td width="15%">@ZFighters.Age</td>
+               <td width="15%">@ZFighters.Abilities</td>
+                <td width="15%">@ZFighters.Weakness</td>
+                <td><div class="w-100 btn-group" role="group">
+                <a asp-controller="DragonBall" asp-action="Update" asp-route-ID="@ZFighters.ID" class="btn btn-secondary "><i class="glyphicon glyphicon-pencil"></i></a>
+                </div></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+    }
+    else
+    {
+<p>No Game created yet</p>
+    }
+</div>

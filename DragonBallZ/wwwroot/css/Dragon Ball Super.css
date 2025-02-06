@@ -1,0 +1,98 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+p {
+    color: #FFFFFF;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+body {
+    margin-bottom: 60px;
+    background-image: url("super.jpg");
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+    .sidebar a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+        .sidebar a:hover {
+            background-color: #be0000;
+            color: #000000;
+        }
+
+
+.openbtn {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    left: 100px;
+    font-size: 36px;
+    margin-left: 60px;
+}
+
+.main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+
+th {
+    color: white;
+}

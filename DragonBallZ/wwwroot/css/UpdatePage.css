@@ -1,0 +1,179 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+label {
+    font-family: 'Times New Roman', serif;
+    font-size: 25px;
+}
+h3 {
+    color: #FFFFFF;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url("gohan.jpg");
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000; 
+    overflow-x: hidden; 
+    padding-top: 60px;
+    transition: 0.5s;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+    .sidebar a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+        .sidebar a:hover {
+            background-color: #9900cc;
+            color: #ffffff;
+        }
+
+
+.openbtn {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    left: 100px;
+    font-size: 36px;
+    margin-left: 60px;
+}
+
+.main {
+    transition: margin-left 0.5s; 
+    padding: 20px;
+    margin-left: 250px;
+}
+
+
+th {
+    color: white;
+}
+
+button {
+    border: none;
+    width: 200px;
+    height: 50px;
+    border: 2px solid #fff;
+    margin: 0 auto;
+    margin-top: 60px;
+    cursor: pointer;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Montserrat-SemiBold";
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+    button i {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-transition-duration: 0.1s;
+        transition-duration: 0.1s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    button:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000000;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    button:hover {
+        border-color: transparent;
+    }
+
+        button:hover:before {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+
+        button:hover i {
+            -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+        }
+
+.form {
+    height: 99vh;
+    justify-content: center;
+}
+

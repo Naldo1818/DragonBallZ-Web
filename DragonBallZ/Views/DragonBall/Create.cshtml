@@ -1,0 +1,80 @@
+﻿@model DragonBallZ.Models.ZFighters
+
+@{
+    ViewData["Title"] = "Create Page";
+}
+@{
+    Layout = "_LayoutCreate";
+}
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-9">
+            <h1>Dragon Ball Z ADD LIST </h1>
+        </div>
+        <div class="col-9">
+            <h3>On following page is a form where you can add any warrior from the Dragon Ball z universe to our Dragon Ball Z List </h3>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<form method="post" asp-action="Create">
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+
+                    <div class="col-6">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" class="form-control" placeholder="Name Of Character" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-6">
+                        <label asp-for="Race"></label>
+                        <input asp-for="Race" class="form-control" placeholder="Race Of Character" />
+                        <span asp-validation-for="Race" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+
+                    <div class="col-6">
+                        <label asp-for="Age"></label>
+                        <input asp-for="Age" class="form-control" placeholder="Age Of Character" />
+                        <span asp-validation-for="Age" class="text-danger"></span>
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="Abilities"></label>
+                        <input asp-for="Abilities" class="form-control" placeholder="Email" />
+                        <span asp-validation-for="Abilities" class="text-danger"></span>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-6">
+                        <label asp-for="Weakness"></label>
+                        <input asp-for="Weakness" class="form-control" placeholder="What Weakness Does The Character Have" />
+                        <span asp-validation-for="Weakness" class="text-danger"></span>
+                    </div>
+                     <br>
+                    <br>
+                </div>
+                <div class="form-group row">
+                    <div >
+                        <button type="submit" value="Create">
+                            Submit
+                        </button>
+                        <button asp-action="Index">
+                            List
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</form>
+
